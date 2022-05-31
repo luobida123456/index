@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="login">
+            <h1>欢迎来到<b>宠物之家</b></h1>
+            <h4>快来领取你的专属<b>宠物</b>吧</h4>
+            <img src="./1.jpg" alt="">
+            <p>已有帐号</p>
+            <button>去登录</button>
+        </div>
+        <div class="register">
+            <h1>欢迎来到<b>宠物之家</b></h1>
+            <h4>快来看看你的可爱<b>宠物</b>吧</h4>
+            <img src="./2.jpg" alt="">
+            <p>没有帐号？</p>
+            <button>去注册</button>
+        </div>
+        <div class="switches">
+            <div class="switch1">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>REGISTER</h1>
+                        </td>
+                        <td><input type="text" placeholder="用户名"></td>
+                        <td><input type="text" placeholder="邮箱"></td>
+                        <td><input type="password" placeholder="密码"></td>
+                        <td><input type="password" placeholder="确认密码"></td>
+                        <td><button>注 册</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="switch2">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>LOGIN</h1>
+                        </td>
+                        <td><input type="text" placeholder="用户名"></td>
+                        <td><input type="password" placeholder="密码"></td>
+                        <td><button>登 录</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let login = document.querySelector('.login')
+        let register = document.querySelector('.register')
+        let switches = document.querySelector('.switches')
+        let switch1 = document.querySelectorAll('.switch1')
+        let switch2 = document.querySelectorAll('.switch2')
+        let login_btn = login.children[login.children.length - 1];
+        let register_btn = register.children[register.children.length - 1]
+
+        register_btn.addEventListener('click', function() {
+            switch1[0].style.display = 'block'
+            switch2[0].style.display = 'none'
+            switches.style.left = 400 + 'px'
+        })
+
+        login_btn.addEventListener('click', function() {
+            switch1[0].style.display = 'none'
+            switch2[0].style.display = 'block'
+            switches.style.left = 50 + 'px'
+        })
+    </script>
+</body>
+
+</html>
